@@ -1,0 +1,52 @@
+body{
+    padding: 40px 250px 40px 250px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header__logo{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.todobox-element__text::before{
+    content: "-";
+    margin-right: 15px;
+}
+
+.todobox-element{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.todobox-element__text{
+    display: inline;
+    margin-right: 5px;
+}
+
+.todobox-element__button{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url("../images/button_normal.svg");
+}
+
+.todobox-element__button:hover{
+    background-image: url("../images/button_hover.svg");
+    transition: 0.3s;
+}
+
+.adder__intro{
+    font-size: 25px;
+}
+
+.adder__text{
+    display: inline;
+    font-size: 25px;
+}
+
+.adder__submit{
+    width: 200px;
+    font-size: 25px;
+}
