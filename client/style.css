@@ -1,13 +1,17 @@
 body{
-    padding: 40px 250px 40px 250px;
-    font-family: 'Open Sans', sans-serif;
+    margin: 0px;
+    font-family: "Century Gothic"; 
+    background: url("/images/background.png");
 }
 
 .header__logo{
-    text-align: center;
-    font-size: 50px;
-    font-weight: 700;
-    margin-bottom: 40px;
+    width: 150px;
+    height: 40px;
+    display: inline-block;
+}
+
+.header__nav{
+    display: inline-block;
 }
 
 .todobox-element__text::before{
