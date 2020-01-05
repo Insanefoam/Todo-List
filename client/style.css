@@ -6,7 +6,7 @@ body{
 
 .header{
     border-bottom: 1px #000000 solid;
-    margin-bottom: 17px;
+    margin-bottom: 25px;
 }
 
 .header__logo{
@@ -14,10 +14,12 @@ body{
     height: 40px;
     margin: 40px 750px 50px 40px;
     display: inline-block;
+    vertical-align: middle;
 }
 
 .header__nav{
     display: inline-block;
+    vertical-align: middle;
 }
 
 .header__nav-el:visited{
@@ -68,4 +70,5 @@ body{
     width: 30px;
     height: 30px;
     vertical-align: middle;
+    outline: 0;
 }
