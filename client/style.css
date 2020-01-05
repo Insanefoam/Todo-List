@@ -6,6 +6,7 @@ body{
 
 .header{
     border-bottom: 1px #000000 solid;
+    margin-bottom: 17px;
 }
 
 .header__logo{
@@ -37,4 +38,34 @@ body{
 
 .header__nav-el:last-child{
     margin-right: 0;
+}
+
+.content{
+    margin: 0px 515px;
+}
+
+.adder__text{
+    font-size: 15px;
+    border-radius: 15px;
+    width: 270px;
+    height: 30px;
+    padding-left: 5px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border:1px solid #000000;
+}
+
+.adder__text:focus{
+    outline: 0;
+}
+
+.adder__intro{
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.adder__submit{
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
 }

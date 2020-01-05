@@ -1,0 +1,21 @@
+<svg id="plus" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30.461 30">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #25ae88;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #fff;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <ellipse id="Ellipse_2" data-name="Ellipse 2" class="cls-1" cx="15.23" cy="15" rx="15.23" ry="15"/>
+  <line id="Line_12" data-name="Line 12" class="cls-2" y2="15" transform="translate(15.23 7.8)"/>
+  <line id="Line_13" data-name="Line 13" class="cls-2" x1="15.23" transform="translate(7.615 15)"/>
+</svg>
