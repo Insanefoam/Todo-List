@@ -28,11 +28,11 @@ body{
     font-size: 20px;
     margin-right: 70px;
     padding: 2px 8px 7px 8px;
-    border-bottom: 2px #FE5E41 solid;
 }
 
 .header__nav-el:hover{
-    border: 2px #FE5E41 solid;
+    border-bottom: 2px #FE5E41 solid;
+    transition-duration: 0.5s;
 }
 
 .header__nav-el:last-child{
