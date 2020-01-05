@@ -1,5 +1,5 @@
 var form = document;
-var todobox = form.getElementsByClassName("todobox")[0];
+var todobox = form.getElementsByClassName("todobox__active")[0];
 var checksTodo = form.getElementsByClassName("todobox-element__button");
 var buttonAddElem = form.getElementById("adder__submit");
 var textAddElem = form.getElementById("adder__text");

@@ -43,7 +43,7 @@ body{
 }
 
 .content{
-    margin: 0px 515px;
+    margin: 0px 0px 215px 515px;
 }
 
 .adder__text{
@@ -52,7 +52,7 @@ body{
     width: 270px;
     height: 30px;
     padding-left: 5px;
-    margin-right: 20px;
+    margin-right: 15px;
     margin-bottom: 10px;
     border:1px solid #000000;
 }
@@ -71,4 +71,53 @@ body{
     height: 30px;
     vertical-align: middle;
     outline: 0;
+}
+
+.todobox__active{
+    font-size: 25px;
+}
+
+.todobox__inactive{
+    font-size: 25px;
+}
+
+.todobox-element__text{
+    font-size: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+
+.todobox-element__button{
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/images/button_normal.svg");
+    width: 20px;
+    height: 20px;
+}
+
+.todobox-element__button:hover{
+    background: url("/images/button_hover.svg");
+    transition-duration: 0.2s;
+}
+
+.footer{
+    border-top: 1px #000000 solid;
+}
+
+.social-media{
+    margin: 25px 740px 0px 25px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-media__icon{
+    width: 45px;
+    height: 45px;
+    margin-right: 25px;
+}
+
+.footer__description{
+    display: inline-block;
+    vertical-align: middle;
 }
