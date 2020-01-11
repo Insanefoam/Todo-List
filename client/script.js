@@ -1,34 +1,38 @@
 var form = document;
-var todobox = form.getElementsByClassName("todobox__active")[0];
+var activeBox = form.getElementsByClassName("todobox__active")[0];
 var checksTodo = form.getElementsByClassName("todobox-element__button");
+var inactiveBox = form.getElementsByClassName("todobox__inactive")[0];
 var buttonAddElem = form.getElementById("adder__submit");
-var textAddElem = form.getElementById("adder__text");
+var inputTextField = form.getElementById("adder__text");
 
 var url = "http://localhost:3000";
 
 //Add for all checkboxes hide-after-click property
-function addListers(){
+function addListeners(){
 for(let i = 0; i < checksTodo.length; i++){
     checksTodo[i].addEventListener("click", function (elem) {
-        var num = i;
-        if(elem.srcElement.parentNode.parentNode != null)
+        if(elem.srcElement.parentNode.parentNode != null){
+            inactiveBox.innerHTML += elem.srcElement.parentNode.outerHTML;
+            //Delete from active todobox todo element
             elem.srcElement.parentNode.parentNode.removeChild(elem.srcElement.parentNode);
+        }
         deleteTodoFromServer(elem.srcElement.parentNode.firstChild.innerHTML);
     });
 };
 }
 
 //Create new TODO from text field
-buttonAddElem.addEventListener("click", function(event){
-    postNewTodoToServer(textAddElem.value);
-    let newTodo = createNewTodo(textAddElem.value);
-    addListers();
+buttonAddElem.addEventListener("click", function (event){
+    postNewTodoToServer(inputTextField.value);
+    activeBox.innerHTML += createNewTodo(inputTextField.value).outerHTML;
+    console.log("dwadwa");
+    addListeners();
 });
 
 
 function createNewTodo(text){
     let tmpText = text;
-    textAddElem.value = "";
+    inputTextField.value = "";
     var newTodo = form.createElement("div");
     var newTodoText = form.createElement("div");
     var newTodoCheckbox = form.createElement("div");
@@ -37,20 +41,18 @@ function createNewTodo(text){
     newTodoCheckbox.className = "todobox-element__button";
     newTodoText.innerHTML += tmpText;
     newTodo.innerHTML += newTodoText.outerHTML + newTodoCheckbox.outerHTML;
-    todobox.innerHTML += newTodo.outerHTML;
-    addListers();
+    return newTodo;
 };
 
 function getAllTodoesFromServer(){
     var request = new XMLHttpRequest();
     request.open("GET", url);
-    let todoes;
-    var requestBody;
     request.onload = () => {
-    todoes = JSON.parse(request.response);
-    for(let i = 0; i < todoes.length; i++){
-        createNewTodo(todoes[i].todo_text);
-    }
+        let todoes = JSON.parse(request.response);
+        for(let i = 0; i < todoes.length; i++){
+            activeBox.innerHTML += createNewTodo(todoes[i].todo_text).outerHTML;
+        }
+        addListeners();
     }
     request.send();
 }

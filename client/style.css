@@ -34,8 +34,8 @@ body{
 }
 
 .header__nav-el:hover{
-    border-bottom: 2px #FE5E41 solid;
-    transition-duration: 0.5s;
+    border-bottom: 1px #FE5E41 solid;
+    transition-duration: 0.3s;
 }
 
 .header__nav-el:last-child{
@@ -75,6 +75,7 @@ body{
 
 .todobox__active{
     font-size: 25px;
+    margin-bottom: 15px;
 }
 
 .todobox__inactive{
@@ -88,17 +89,34 @@ body{
     margin-top: 15px;
 }
 
-.todobox-element__button{
+.todobox__active .todobox-element__button{
     display: inline-block;
     vertical-align: middle;
-    background: url("/images/button_normal.svg");
+    background: url("/images/active_button_normal.svg");
     width: 20px;
     height: 20px;
 }
 
-.todobox-element__button:hover{
-    background: url("/images/button_hover.svg");
-    transition-duration: 0.2s;
+.todobox__active .todobox-element__button:hover{
+    background: url("/images/active_button_hover.svg");
+    transition-duration: 0.3s;
+}
+
+.todobox__inactive .todobox-element__text{
+    text-decoration: line-through;
+}
+
+.todobox__inactive .todobox-element__button{
+    display: inline-block;
+    vertical-align: middle;
+    background: url("/images/inactive_button_normal.svg");
+    width: 20px;
+    height: 20px;
+}
+
+.todobox__inactive .todobox-element__button:hover{
+    background: url("/images/inactive_button_hover.svg");
+    transition-duration: 0.3s;
 }
 
 .footer{
