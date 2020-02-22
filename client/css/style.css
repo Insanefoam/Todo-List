@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     font-family: "Century Gothic";
-    background: url("/images/background.png");
+    background: url("../images/background.png");
 }
 
 .header{
@@ -97,13 +97,13 @@ body{
 .todobox__active .todobox-element__button{
     display: inline-block;
     vertical-align: middle;
-    background: url("/images/active_button_normal.svg");
+    background: url("../images/active_button_normal.svg");
     width: 20px;
     height: 20px;
 }
 
 .todobox__active .todobox-element__button:hover{
-    background: url("/images/active_button_hover.svg");
+    background: url("../images/active_button_hover.svg");
     transition-duration: 0.3s;
 }
 
@@ -114,13 +114,13 @@ body{
 .todobox__inactive .todobox-element__button{
     display: inline-block;
     vertical-align: middle;
-    background: url("/images/inactive_button_normal.svg");
+    background: url("../images/inactive_button_normal.svg");
     width: 20px;
     height: 20px;
 }
 
 .todobox__inactive .todobox-element__button:hover{
-    background: url("/images/inactive_button_hover.svg");
+    background: url("../images/inactive_button_hover.svg");
     transition-duration: 0.3s;
 }
 

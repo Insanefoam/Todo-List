@@ -14,7 +14,7 @@ window.addEventListener("beforeunload", function(elem){
     for(let i = 1; i < inactiveTodoes.length; i++){
         deleteTodoFromServer(inactiveTodoes[i].childNodes[0].innerHTML);
     }
-})
+});
 
 doc.addEventListener("click", function(elem){
     let src = elem.srcElement;
@@ -35,7 +35,14 @@ doc.addEventListener("click", function(elem){
     for(let i = 1; i < inactiveTodoes.length; i++){
         console.log(inactiveTodoes[i].childNodes[0].innerHTML);
     }
-})
+});
+
+inputTextField.addEventListener("keypress", function(elem){
+    if(elem.keyCode == 13){
+        let event = new Event("click");
+        buttonAddElem.dispatchEvent(event);
+    }
+});
 
 //Create new TODO from text field
 buttonAddElem.addEventListener("click", function (event){
@@ -76,7 +83,7 @@ function postNewTodoToServer(text){
     xtr.send(JSON.stringify({
         todo_text: text
     }));
-}
+};
 
 function deleteTodoFromServer(text){
     var xtr = new XMLHttpRequest();
@@ -84,4 +91,4 @@ function deleteTodoFromServer(text){
     xtr.send(JSON.stringify({
         todo_text: text
     }));
-}
+};
