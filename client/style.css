@@ -73,6 +73,11 @@ body{
     outline: 0;
 }
 
+.adder__submit:hover{
+    transform: rotate(180deg);
+    transition-duration: 0.5s;
+}
+
 .todobox__active{
     font-size: 25px;
     margin-bottom: 15px;
