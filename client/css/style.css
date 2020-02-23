@@ -61,6 +61,10 @@ body{
     outline: 0;
 }
 
+.adder__text:focus::placeholder{
+    color:transparent;
+}
+
 .adder__intro{
     margin-bottom: 10px;
     font-size: 25px;
